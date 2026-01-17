@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "SJS",
+    "PRP"
+  ],
+  "key": {
+    "P": { "tag": "minecraft:planks" },
+    "S": { "item": "avilixradiomod:speaker" },
+    "J": { "item": "minecraft:jukebox" },
+    "R": { "item": "minecraft:redstone_block" }
+  },
+  "result": {
+    "id": "avilixradiomod:radio",
+    "count": 1
+  }
+}

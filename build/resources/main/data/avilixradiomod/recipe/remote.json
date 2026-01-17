@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "PPP",
+    " P "
+  ],
+  "key": {
+    "R": { "item": "minecraft:redstone_block" },
+    "P": { "tag": "minecraft:planks" }
+  },
+  "result": {
+    "id": "avilixradiomod:remote",
+    "count": 1
+  }
+}

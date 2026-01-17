@@ -1,0 +1,35 @@
+{
+  "block.avilixradiomod.radio": "Radio",
+  "block.avilixradiomod.speaker": "Speaker",
+  "item.avilixradiomod.remote": "Remote",
+  "screen.avilixradiomod.radio": "Radio",
+  "screen.avilixradiomod.url": "Stream URL",
+  "screen.avilixradiomod.volume": "Volume",
+  "screen.avilixradiomod.play": "Play",
+  "screen.avilixradiomod.stop": "Stop",
+  "screen.avilixradiomod.save": "Save",
+
+  "screen.avilixradiomod.url_placeholder": "https://example.com/stream.mp3",
+  "screen.avilixradiomod.history": "History",
+
+  "message.avilixradiomod.remote_saved": "Remote saved a radio.",
+  "message.avilixradiomod.remote_empty": "Remote has no radio saved.",
+  "message.avilixradiomod.remote_cleared": "Remote cleared.",
+  "message.avilixradiomod.speaker_linked": "Speaker linked to radio.",
+  "message.avilixradiomod.speaker_cleared": "Speaker link cleared.",
+
+  "msg.avilixradiomod.remote_linked": "Remote linked to a radio.",
+  "msg.avilixradiomod.remote_cleared": "Remote cleared.",
+  "msg.avilixradiomod.speaker_linked": "Speaker linked to radio.",
+  "msg.avilixradiomod.speaker_unlinked": "Speaker unlinked.",
+  "itemGroup.avilixradiomod": "Avilix Radio",
+
+  "message.avilixradiomod.bad_url": "Invalid stream URL. Use http:// or https:// and do not leave it empty.",
+  "message.avilixradiomod.bad_url_short": "Invalid URL!",
+
+  "screen.avilixradiomod.stopped": "Stopped",
+  "screen.avilixradiomod.playing": "Playing",
+
+  "options.avilixradiomod.master_volume": "Avilix Radio Volume"
+
+}

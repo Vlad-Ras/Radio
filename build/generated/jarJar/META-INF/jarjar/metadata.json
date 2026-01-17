@@ -1,0 +1,64 @@
+{
+  "jars": [
+    {
+      "identifier": {
+        "group": "com.lowdragmc.ldlib2",
+        "artifact": "ldlib2-neoforge-1.21.1"
+      },
+      "version": {
+        "range": "[2.0.1,)",
+        "artifactVersion": "2.0.1"
+      },
+      "path": "META-INF/jarjar/ldlib2-neoforge-1.21.1-2.0.1-all.jar",
+      "isObfuscated": false
+    },
+    {
+      "identifier": {
+        "group": "com.mysql",
+        "artifact": "mysql-connector-j"
+      },
+      "version": {
+        "range": "[8.0.33,)",
+        "artifactVersion": "8.0.33"
+      },
+      "path": "META-INF/jarjar/mysql-connector-j-8.0.33.jar",
+      "isObfuscated": false
+    },
+    {
+      "identifier": {
+        "group": "com.zaxxer",
+        "artifact": "HikariCP"
+      },
+      "version": {
+        "range": "[5.1.0,)",
+        "artifactVersion": "5.1.0"
+      },
+      "path": "META-INF/jarjar/HikariCP-5.1.0.jar",
+      "isObfuscated": false
+    },
+    {
+      "identifier": {
+        "group": "javazoom",
+        "artifact": "jlayer"
+      },
+      "version": {
+        "range": "[1.0.1,1.0.2)",
+        "artifactVersion": "1.0.1"
+      },
+      "path": "META-INF/jarjar/jlayer-1.0.1.jar",
+      "isObfuscated": false
+    },
+    {
+      "identifier": {
+        "group": "org.appliedenergistics.yoga",
+        "artifact": "yoga"
+      },
+      "version": {
+        "range": "[1.0.0,)",
+        "artifactVersion": "1.0.0"
+      },
+      "path": "META-INF/jarjar/yoga-1.0.0.jar",
+      "isObfuscated": false
+    }
+  ]
+}

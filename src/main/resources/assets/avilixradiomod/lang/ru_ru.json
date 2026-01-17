@@ -1,0 +1,33 @@
+{
+  "block.avilixradiomod.radio": "Радио",
+  "block.avilixradiomod.speaker": "Динамик",
+  "item.avilixradiomod.remote": "Пульт",
+
+  "screen.avilixradiomod.radio": "Радио",
+  "screen.avilixradiomod.url": "Ссылка на поток",
+  "screen.avilixradiomod.volume": "Громкость",
+  "screen.avilixradiomod.play": "Воспроизвести",
+  "screen.avilixradiomod.stop": "Остановить",
+  "screen.avilixradiomod.save": "Сохранить",
+  "screen.avilixradiomod.url_placeholder": "https://example.com/stream.mp3",
+
+  "message.avilixradiomod.remote_saved": "Пульт сохранил радио.",
+  "message.avilixradiomod.remote_empty": "В пульте нет сохранённого радио.",
+  "message.avilixradiomod.remote_cleared": "Пульт очищен.",
+  "message.avilixradiomod.speaker_linked": "Динамик привязан к радио.",
+  "message.avilixradiomod.speaker_cleared": "Привязка динамика очищена.",
+  "itemGroup.avilixradiomod": "Авиликс радио",
+
+  "message.avilixradiomod.bad_url": "Неверная ссылка. Используйте http:// или https:// и не оставляйте его пустым.",
+  "message.avilixradiomod.bad_url_short": "Неверная ссылка!",
+
+  "screen.avilixradiomod.history": "История",
+
+
+  "screen.avilixradiomod.stopped": "Остановлено",
+  "screen.avilixradiomod.playing": "Воспроизведение",
+
+  "options.avilixradiomod.master_volume": "Громкость Avilix Radio"
+
+
+}

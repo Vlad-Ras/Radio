@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "avilixradiomod:block/radio_side",
+    "north": "avilixradiomod:block/speaker_on",
+    "south": "avilixradiomod:block/speaker_on",
+    "east":  "avilixradiomod:block/speaker_on",
+    "west":  "avilixradiomod:block/speaker_on",
+    "up":    "avilixradiomod:block/speaker_on",
+    "down":  "avilixradiomod:block/speaker_on"
+  }
+}

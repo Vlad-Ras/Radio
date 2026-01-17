@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "avilixradiomod:block/radio" },
+    "facing=south": { "model": "avilixradiomod:block/radio", "y": 180 },
+    "facing=west":  { "model": "avilixradiomod:block/radio", "y": 270 },
+    "facing=east":  { "model": "avilixradiomod:block/radio", "y": 90 }
+  }
+}
