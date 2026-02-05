@@ -325,11 +325,17 @@ public final class RadioScreen extends ModularUIContainerScreen<RadioMenu> {
         String url = menu.getUrl();
         if (url != null && !url.isBlank()) return url.trim();
 
+        // IMPORTANT: this is the "default" URL for an empty radio.
+        // If the user changes it in avilixradiomod-client.toml, they expect it to be shown here.
+        // History is still available via the dropdown, but it must not override the configured default.
+        String def = UrlHistory.getDefaultUrl();
+        if (def != null && !def.isBlank()) return def.trim();
+
         List<String> hist = UrlHistory.getAll();
         if (!hist.isEmpty()) {
             String last = hist.get(0);
             if (last != null && !last.isBlank()) return last.trim();
         }
-        return UrlHistory.getDefaultUrl();
+        return "";
     }
 }

@@ -132,7 +132,7 @@ public final class ModConfigs {
             b.push("radio");
 
             defaultUrl = b.comment("Default URL shown in the GUI when empty.")
-                    .define("defaultUrl", "http://91.223.90.244:8081/public/avilix");
+                    .define("defaultUrl", "https://radio.avilix.ru/listen/avilix/radio.mp3");
 
             historyLimit = b.comment("How many recent URLs to remember.")
                     .defineInRange("historyLimit", 12, 0, 64);

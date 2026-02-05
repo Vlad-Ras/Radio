@@ -6,7 +6,7 @@ modId="avilixradiomod"
 
 [[mods]]
 modId="avilixradiomod"
-version="1.0.28"
+version="1.0.29"
 displayName="Avilix Radio Mod"
 authors="Avilix"
 description='''A streaming radio with speakers and a remote.'''
