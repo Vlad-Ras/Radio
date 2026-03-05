@@ -4,6 +4,7 @@ import com.avilixradiomod.blockentity.RadioBlockEntity;
 import com.avilixradiomod.config.ModConfigs;
 import com.avilixradiomod.server.db.RadioLinkLogger;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Mth;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -25,16 +26,15 @@ public final class ServerPayloadHandler {
         final BlockEntity be = level.getBlockEntity(payload.pos());
         if (be instanceof RadioBlockEntity radio) {
             final String url = sanitizeUrl(payload.url());
-            final int volume = clamp(payload.volume(), 0, 100);
+            final int volume = Mth.clamp(payload.volume(), 0, 100);
 
-            // Log only when the URL actually changes (prevents spam from volume/play toggles)
-            final String oldUrl = radio.getUrl();
             radio.setSettings(url, payload.playing(), volume);
 
-            if (!url.isBlank() && !url.equals(oldUrl)) {
+            if (!url.isBlank()) {
                 RadioLinkLogger.logPastedLink(player, payload.pos(), url);
             }
-        }
+            }
+
     }
 
     private static int clamp(int v, int min, int max) {
@@ -46,10 +46,8 @@ public final class ServerPayloadHandler {
         url = url.trim();
         final int maxLen = ModConfigs.COMMON.maxUrlLength.get();
         if (url.length() > maxLen) url = url.substring(0, maxLen);
+
         // Allow only http(s) to avoid local file access.
-        if (!(url.startsWith("http://") || url.startsWith("https://"))) {
-            return "";
-        }
         return url;
     }
 }
