@@ -17,6 +17,16 @@ public final class UrlHistory {
     }
 
     public static String getDefaultUrl() {
+        // Prefer COMMON defaultStreamUrl if user configured it:
+        // - it affects newly placed radios server-side
+        // - and users expect the GUI "default URL" to match that setting.
+        String common = ModConfigs.COMMON.defaultStreamUrl.get();
+        if (common != null) {
+            common = common.trim();
+            if (!common.isEmpty()) return common;
+        }
+
+        // Fallback: client-side GUI default.
         String d = ModConfigs.CLIENT.defaultUrl.get();
         return d == null ? "" : d.trim();
     }

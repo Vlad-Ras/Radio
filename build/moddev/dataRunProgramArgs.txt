@@ -7,7 +7,7 @@ forgedatadev
 --assetIndex
 17
 --assetsDir
-C:\\Users\\Cybershop\\.gradle\\caches\\neoformruntime\\assets
+C:\\Users\\Max\\.gradle\\caches\\neoformruntime\\assets
 --gameDir
 .
 --fml.fmlVersion
@@ -24,6 +24,6 @@ C:\\Users\\Cybershop\\.gradle\\caches\\neoformruntime\\assets
 avilixradiomod
 --all
 --output
-E:\\Mods\\avilixradiomod-neoforge-1.21.1\\src\\generated\\resources
+"F:\\NeoForge mods\\Radio\\src\\generated\\resources"
 --existing
-E:\\Mods\\avilixradiomod-neoforge-1.21.1\\src\\main\\resources
+"F:\\NeoForge mods\\Radio\\src\\main\\resources"
