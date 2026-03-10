@@ -129,6 +129,53 @@ public class SpeakerBlock extends BaseEntityBlock {
         }
     }
 
+
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        super.animateTick(state, level, pos, random);
+
+        if (!state.getValue(PLAYING)) {
+            return;
+        }
+
+        Direction facing = state.getValue(FACING);
+        double centerX = pos.getX() + 0.5;
+        double centerY = pos.getY() + 0.5;
+        double centerZ = pos.getZ() + 0.5;
+
+        if (random.nextFloat() < 0.85f) {
+            Direction side = Direction.Plane.HORIZONTAL.getRandomDirection(random);
+            double horizontalOffset = 0.84;
+            double sideSpread = (random.nextDouble() - 0.5) * 0.32;
+            double y = pos.getY() + 0.28 + random.nextDouble() * 0.52;
+
+            double x = centerX + side.getStepX() * horizontalOffset + (side.getAxis() == Direction.Axis.Z ? sideSpread : 0.0);
+            double z = centerZ + side.getStepZ() * horizontalOffset + (side.getAxis() == Direction.Axis.X ? sideSpread : 0.0);
+            double note = random.nextInt(25) / 24.0D;
+
+            level.addParticle(ParticleTypes.NOTE, x, y, z, note, 0.16D, 0.0D);
+        }
+
+        if (random.nextFloat() < 0.70f) {
+            double x = centerX + (random.nextDouble() - 0.5) * 0.40;
+            double y = pos.getY() + 1.02;
+            double z = centerZ + (random.nextDouble() - 0.5) * 0.40;
+            double note = random.nextInt(25) / 24.0D;
+
+            level.addParticle(ParticleTypes.NOTE, x, y, z, note, 0.18D, 0.0D);
+        }
+
+        if (random.nextFloat() < 0.55f) {
+            double backBias = -0.06;
+            double x = centerX + (random.nextDouble() - 0.5) * 0.34 + facing.getStepX() * backBias;
+            double y = pos.getY() - 0.9;
+            double z = centerZ + (random.nextDouble() - 0.5) * 0.34 + facing.getStepZ() * backBias;
+            double note = random.nextInt(25) / 24.0D;
+
+            level.addParticle(ParticleTypes.NOTE, x, y, z, note, -0.12D, 0.0D);
+        }
+    }
+
     @Override
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
         ItemStack tool = player.getMainHandItem();

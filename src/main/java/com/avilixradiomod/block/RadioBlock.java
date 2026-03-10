@@ -128,6 +128,47 @@ public class RadioBlock extends BaseEntityBlock {
         }
     }
 
+
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        super.animateTick(state, level, pos, random);
+
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!(blockEntity instanceof RadioBlockEntity radio)) {
+            return;
+        }
+
+        if (!radio.isPlaying()) {
+            return;
+        }
+
+        String url = radio.getUrl();
+        if (url == null || url.isBlank()) {
+            return;
+        }
+
+        if (random.nextFloat() > 0.75f) {
+            return;
+        }
+
+        Direction facing = state.getValue(FACING);
+
+        double centerX = pos.getX() + 0.5;
+        double centerY = pos.getY() + 0.62 + random.nextDouble() * 0.16;
+        double centerZ = pos.getZ() + 0.5;
+
+        double frontOffset = 0.82;
+        double sideSpread = (random.nextDouble() - 0.5) * 0.22;
+
+        double x = centerX + facing.getStepX() * frontOffset + (facing.getAxis() == Direction.Axis.Z ? sideSpread : 0.0);
+        double z = centerZ + facing.getStepZ() * frontOffset + (facing.getAxis() == Direction.Axis.X ? sideSpread : 0.0);
+        double y = centerY;
+
+        double note = random.nextInt(25) / 24.0D;
+
+        level.addParticle(ParticleTypes.NOTE, x, y, z, note, 0.16D, 0.0D);
+    }
+
     @Override
     public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
         ItemStack tool = player.getMainHandItem();
